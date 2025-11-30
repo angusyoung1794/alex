@@ -99,6 +99,9 @@ const Education = () => {
       <div className="fixed top-1/4 right-10 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="fixed bottom-1/4 left-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
+      {/* Navigation Buttons */}
+      <NavigationButtons />
+
       <style jsx>{`
         @keyframes slideIn {
           from {
