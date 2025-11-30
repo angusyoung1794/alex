@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { ArrowLeft, GraduationCap, MapPin, Calendar } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import NavigationButtons from '../components/NavigationButtons';
 
 const Education = () => {
   const navigate = useNavigate();
