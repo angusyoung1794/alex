@@ -7,7 +7,6 @@ import NavigationButtons from '../components/NavigationButtons';
 const Home = () => {
   const { language, t } = useLanguage();
   const [fogOpacity, setFogOpacity] = useState(1);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     // Animate fog dissipation
