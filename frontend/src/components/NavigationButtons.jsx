@@ -19,7 +19,7 @@ const NavigationButtons = () => {
   }, []);
 
   const navItems = [
-    { path: '/', label: 'Home', icon: User, delay: 0 },
+    { path: '/', label: 'Home', icon: Home, delay: 0 },
     { path: '/about', label: t('navAbout'), icon: User, delay: 100 },
     { path: '/education', label: t('navEducation'), icon: GraduationCap, delay: 200 },
     { path: '/experience', label: t('navExperience'), icon: Briefcase, delay: 300 },
