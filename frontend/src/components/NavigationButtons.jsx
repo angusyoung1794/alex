@@ -19,16 +19,13 @@ const NavigationButtons = () => {
   }, []);
 
   const navItems = [
-    { path: '/about', label: t('navAbout'), icon: User, delay: 0 },
-    { path: '/education', label: t('navEducation'), icon: GraduationCap, delay: 100 },
-    { path: '/experience', label: t('navExperience'), icon: Briefcase, delay: 200 },
-    { path: '/skills', label: t('navSkills'), icon: Award, delay: 300 },
-    { path: '/contact', label: t('navContact'), icon: Mail, delay: 400 },
+    { path: '/', label: 'Home', icon: User, delay: 0 },
+    { path: '/about', label: t('navAbout'), icon: User, delay: 100 },
+    { path: '/education', label: t('navEducation'), icon: GraduationCap, delay: 200 },
+    { path: '/experience', label: t('navExperience'), icon: Briefcase, delay: 300 },
+    { path: '/skills', label: t('navSkills'), icon: Award, delay: 400 },
+    { path: '/contact', label: t('navContact'), icon: Mail, delay: 500 },
   ];
-
-  const isHomePage = location.pathname === '/';
-
-  if (!isHomePage) return null;
 
   return (
     <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex flex-col space-y-4">
