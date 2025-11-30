@@ -120,12 +120,17 @@ const Home = () => {
           </div>
 
           {/* Promo Section with 4 languages */}
-          <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/30 rounded-2xl p-8 max-w-3xl mx-auto">
+          <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/30 rounded-2xl p-8 max-w-4xl mx-auto">
             <div className="text-center space-y-6">
-              <p className="text-xl text-pink-400 font-semibold">
-                {t('promoText')}
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <h3 className="text-2xl text-white font-bold mb-4">
+                {language === 'de' ? 'Video-Angebote' : 'Video Offers'}
+              </h3>
+              
+              {/* Deutsch Video */}
+              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-4 mb-4 hover:border-pink-500/40 transition-all duration-300">
+                <p className="text-lg text-gray-300 mb-3">
+                  {t('promoTextDeutsch')}
+                </p>
                 <Button
                   onClick={() => {
                     setSelectedLanguage('de');
@@ -137,6 +142,13 @@ const Home = () => {
                   <Play className="w-4 h-4 mr-2" />
                   Deutsch
                 </Button>
+              </div>
+
+              {/* English Video */}
+              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-4 mb-4 hover:border-pink-500/40 transition-all duration-300">
+                <p className="text-lg text-gray-300 mb-3">
+                  {t('promoTextEnglish')}
+                </p>
                 <Button
                   onClick={() => {
                     setSelectedLanguage('en');
@@ -148,6 +160,13 @@ const Home = () => {
                   <Play className="w-4 h-4 mr-2" />
                   English
                 </Button>
+              </div>
+
+              {/* Español Video */}
+              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-4 mb-4 hover:border-pink-500/40 transition-all duration-300">
+                <p className="text-lg text-gray-300 mb-3">
+                  {t('promoTextEspanol')}
+                </p>
                 <Button
                   onClick={() => {
                     setSelectedLanguage('es');
@@ -159,6 +178,13 @@ const Home = () => {
                   <Play className="w-4 h-4 mr-2" />
                   Español
                 </Button>
+              </div>
+
+              {/* Chinese Video */}
+              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-4 hover:border-pink-500/40 transition-all duration-300">
+                <p className="text-lg text-gray-300 mb-3">
+                  {t('promoTextChinese')}
+                </p>
                 <Button
                   onClick={() => {
                     setSelectedLanguage('zh');
