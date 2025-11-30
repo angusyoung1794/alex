@@ -26,20 +26,33 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Hide Emergent badge and any iframe badges */
-a[href*="emergent.sh"],
+/* Hide Emergent badge - comprehensive approach */
+a[href*="emergent"],
+a[href*=".sh"],
 iframe[src*="emergent"],
-div[class*="emergent-badge"],
-div[id*="emergent-badge"],
-button[class*="emergent"] {
+div[class*="badge"],
+div[id*="badge"],
+button[class*="emergent"],
+div[style*="position: fixed"][style*="bottom"],
+div[style*="position: fixed"][style*="right"],
+a[target="_blank"][rel*="noopener"][style*="fixed"] {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
-/* Hide elements in bottom right corner that might be badges */
-body > div:last-child:not(#root) {
+/* Hide any fixed positioned elements in bottom right */
+body > div:not(#root) {
+    display: none !important;
+}
+
+/* Additional selectors for common badge patterns */
+div[class*="Badge"],
+a[class*="badge"],
+span[class*="badge"] {
     display: none !important;
 }
 
