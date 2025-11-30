@@ -99,6 +99,10 @@ const translations = {
     heroSubtitle: 'We trained for 8 years to serve you.',
     makeOffer: 'Do an offer',
     promoText: 'Click the \'Make an Offer\' button and receive 100 euros.',
+    promoTextDeutsch: 'Klicken Sie auf \'Angebot machen\' und erhalten Sie 100 Euro.',
+    promoTextEnglish: 'Click the \'Make an Offer\' button and receive 100 euros.',
+    promoTextEspanol: 'Haga clic en \'Hacer una oferta\' y reciba 100 euros.',
+    promoTextChinese: 'Diǎnjí tíchū bàojià, lì dé 100 ōu!',
     watchVideo: 'Watch Video',
     
     // Navigation
