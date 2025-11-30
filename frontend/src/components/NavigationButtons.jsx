@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
-import { User, GraduationCap, Briefcase, Award, Mail } from 'lucide-react';
+import { Home, User, GraduationCap, Briefcase, Award, Mail } from 'lucide-react';
 
 const NavigationButtons = () => {
   const navigate = useNavigate();
