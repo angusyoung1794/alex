@@ -210,7 +210,12 @@ const Home = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         videoUrl={getVideoUrl(selectedLanguage)}
-        title={t('promoText')}
+        title={
+          selectedLanguage === 'de' ? t('promoTextDeutsch') :
+          selectedLanguage === 'en' ? t('promoTextEnglish') :
+          selectedLanguage === 'es' ? t('promoTextEspanol') :
+          t('promoTextChinese')
+        }
       />
 
       {/* Decorative elements */}
