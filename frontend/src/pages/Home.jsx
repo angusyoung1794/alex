@@ -24,12 +24,16 @@ const Home = () => {
     window.location.href = `mailto:7css77@gmail.com?subject=${encodeURIComponent(subject)}`;
   };
 
-  const getVideoUrl = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState('de');
+  
+  const getVideoUrl = (lang) => {
     const videos = {
       de: 'https://youtube.com/shorts/WkoMyMRr46g?feature=share',
       en: 'https://youtube.com/shorts/jIrjb2hxF5Y?feature=share',
+      es: 'https://youtube.com/shorts/L477pGiLIeo?feature=share',
+      zh: 'https://youtube.com/shorts/dV2Z2tTVE6U?feature=share',
     };
-    return videos[language] || videos.de;
+    return videos[lang];
   };
 
   return (
