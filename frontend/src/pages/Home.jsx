@@ -131,17 +131,15 @@ const Home = () => {
                 <p className="text-lg text-gray-300 mb-3">
                   {t('promoTextDeutsch')}
                 </p>
-                <Button
-                  onClick={() => {
-                    setSelectedLanguage('de');
-                    setIsModalOpen(true);
-                  }}
-                  variant="outline"
-                  className="border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
+                <a
+                  href={getVideoUrl('de')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center border border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300 px-4 py-2 rounded-md"
                 >
                   <Play className="w-4 h-4 mr-2" />
                   Deutsch
-                </Button>
+                </a>
               </div>
 
               {/* English Video */}
@@ -149,17 +147,15 @@ const Home = () => {
                 <p className="text-lg text-gray-300 mb-3">
                   {t('promoTextEnglish')}
                 </p>
-                <Button
-                  onClick={() => {
-                    setSelectedLanguage('en');
-                    setIsModalOpen(true);
-                  }}
-                  variant="outline"
-                  className="border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
+                <a
+                  href={getVideoUrl('en')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center border border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300 px-4 py-2 rounded-md"
                 >
                   <Play className="w-4 h-4 mr-2" />
                   English
-                </Button>
+                </a>
               </div>
 
               {/* Español Video */}
@@ -167,17 +163,15 @@ const Home = () => {
                 <p className="text-lg text-gray-300 mb-3">
                   {t('promoTextEspanol')}
                 </p>
-                <Button
-                  onClick={() => {
-                    setSelectedLanguage('es');
-                    setIsModalOpen(true);
-                  }}
-                  variant="outline"
-                  className="border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
+                <a
+                  href={getVideoUrl('es')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center border border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300 px-4 py-2 rounded-md"
                 >
                   <Play className="w-4 h-4 mr-2" />
                   Español
-                </Button>
+                </a>
               </div>
 
               {/* Chinese Video */}
@@ -185,17 +179,15 @@ const Home = () => {
                 <p className="text-lg text-gray-300 mb-3">
                   {t('promoTextChinese')}
                 </p>
-                <Button
-                  onClick={() => {
-                    setSelectedLanguage('zh');
-                    setIsModalOpen(true);
-                  }}
-                  variant="outline"
-                  className="border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
+                <a
+                  href={getVideoUrl('zh')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center border border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300 px-4 py-2 rounded-md"
                 >
                   <Play className="w-4 h-4 mr-2" />
                   中文
-                </Button>
+                </a>
               </div>
             </div>
           </div>
