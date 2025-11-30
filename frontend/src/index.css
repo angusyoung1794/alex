@@ -26,6 +26,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Hide Emergent badge */
+a[href*="emergent.sh"] {
+    display: none !important;
+}
+
 @layer base {
     :root {
         --background: 0 0% 100%;
