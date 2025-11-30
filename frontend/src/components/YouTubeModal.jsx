@@ -4,11 +4,6 @@ import { X, ExternalLink } from 'lucide-react';
 const YouTubeModal = ({ isOpen, onClose, videoUrl, title }) => {
   if (!isOpen) return null;
 
-  const handleOpenVideo = () => {
-    window.open(videoUrl, '_blank', 'noopener,noreferrer');
-    onClose();
-  };
-
   return (
     <div 
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm"
@@ -40,8 +35,12 @@ const YouTubeModal = ({ isOpen, onClose, videoUrl, title }) => {
               : 'Click the button below to watch the video on YouTube'}
           </p>
 
-          <button
-            onClick={handleOpenVideo}
+          {/* Direct link for mobile compatibility */}
+          <a
+            href={videoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
             className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3"
           >
             <ExternalLink className="w-6 h-6" />
@@ -50,9 +49,9 @@ const YouTubeModal = ({ isOpen, onClose, videoUrl, title }) => {
                 ? 'Video auf YouTube öffnen' 
                 : 'Open Video on YouTube'}
             </span>
-          </button>
+          </a>
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500 break-all">
             {videoUrl}
           </p>
         </div>
