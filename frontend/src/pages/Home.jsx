@@ -3,7 +3,6 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Mail, Play } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import NavigationButtons from '../components/NavigationButtons';
-import YouTubeModal from '../components/YouTubeModal';
 
 const Home = () => {
   const { language, t } = useLanguage();
