@@ -1,0 +1,97 @@
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+import { Download, Globe } from 'lucide-react';
+import { Button } from './ui/button';
+
+const Layout = ({ children }) => {
+  const { language, toggleLanguage, t } = useLanguage();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-pink-500/20">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-3 group">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_1e9b8f76-4521-4fdf-ae91-afad42458ef4/artifacts/0hgaegog_Alex-GSM_Vibrant_Logo.png" 
+                alt="Alex-GSM Logo" 
+                className="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
+              />
+            </Link>
+
+            {/* Right Side */}
+            <div className="flex items-center space-x-4">
+              {/* Language Toggle */}
+              <Button
+                onClick={toggleLanguage}
+                variant="outline"
+                size="sm"
+                className="border-pink-500/30 bg-slate-900/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
+              >
+                <Globe className="w-4 h-4 mr-2" />
+                {language === 'de' ? 'EN' : 'DE'}
+              </Button>
+
+              {/* CV Download */}
+              <a
+                href="https://customer-assets.emergentagent.com/job_1e9b8f76-4521-4fdf-ae91-afad42458ef4/artifacts/831j31le_ALEKSEI_BESPECHNYI.pdf"
+                download="ALEKSEI_BESPECHNYI.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="sm"
+                  className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border-0 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  {t('downloadCV')}
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="pt-20">
+        {children}
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-slate-950/95 border-t border-pink-500/20 py-8 mt-20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              {t('footerRights')}
+            </div>
+            <div className="flex items-center space-x-6">
+              <a 
+                href="https://linkedin.com/in/alexeybespechny" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
+              >
+                LinkedIn
+              </a>
+              <a 
+                href="https://xing.com/profile/Alexey_Bespechny" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
+              >
+                XING
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Layout;
