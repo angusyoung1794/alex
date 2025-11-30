@@ -22,7 +22,6 @@ const Home = () => {
     window.location.href = `mailto:7css77@gmail.com?subject=${encodeURIComponent(subject)}`;
   };
 
-  const [selectedLanguage, setSelectedLanguage] = useState('de');
   
   const getVideoUrl = (lang) => {
     const videos = {
