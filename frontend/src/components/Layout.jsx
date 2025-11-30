@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   const isHome = location.pathname === '/';
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-black">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-pink-500/20">
         <div className="container mx-auto px-4 py-4">
