@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { ArrowLeft, Languages, Laptop, Award } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import NavigationButtons from '../components/NavigationButtons';
 
 const Skills = () => {
   const navigate = useNavigate();
