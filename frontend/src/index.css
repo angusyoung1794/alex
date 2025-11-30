@@ -26,8 +26,20 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Hide Emergent badge */
-a[href*="emergent.sh"] {
+/* Hide Emergent badge and any iframe badges */
+a[href*="emergent.sh"],
+iframe[src*="emergent"],
+div[class*="emergent-badge"],
+div[id*="emergent-badge"],
+button[class*="emergent"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Hide elements in bottom right corner that might be badges */
+body > div:last-child:not(#root) {
     display: none !important;
 }
 
