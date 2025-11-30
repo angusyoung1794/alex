@@ -1,29 +1,21 @@
 import React from 'react';
-import { X } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
 
 const YouTubeModal = ({ isOpen, onClose, videoUrl, title }) => {
-  // Extract video ID from YouTube URL
-  const getVideoId = (url) => {
-    if (!url) return null;
-    // Match both shorts and regular video URLs
-    const shortsMatch = url.match(/shorts\/([a-zA-Z0-9_-]+)/);
-    const watchMatch = url.match(/[?&]v=([a-zA-Z0-9_-]+)/);
-    const videoId = shortsMatch ? shortsMatch[1] : (watchMatch ? watchMatch[1] : null);
-    return videoId;
-  };
-
-  const videoId = getVideoId(videoUrl);
-  const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1` : null;
-
   if (!isOpen) return null;
+
+  const handleOpenVideo = () => {
+    window.open(videoUrl, '_blank', 'noopener,noreferrer');
+    onClose();
+  };
 
   return (
     <div 
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm"
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-4xl mx-4 bg-slate-900 border-2 border-pink-500/30 rounded-2xl shadow-2xl shadow-pink-500/20"
+        className="relative w-full max-w-2xl mx-4 bg-slate-900 border-2 border-pink-500/30 rounded-2xl shadow-2xl shadow-pink-500/20 p-8"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -34,28 +26,35 @@ const YouTubeModal = ({ isOpen, onClose, videoUrl, title }) => {
           <X className="w-6 h-6" />
         </button>
 
-        {/* Header */}
-        <div className="p-6 border-b border-pink-500/20">
-          <h3 className="text-xl font-bold text-white">{title}</h3>
-        </div>
-
-        {/* Video Container */}
-        <div className="p-6">
-          <div className="relative w-full bg-black rounded-lg overflow-hidden" style={{ paddingBottom: '56.25%' }}>
-            {embedUrl && (
-              <iframe
-                src={embedUrl}
-                title={title}
-                className="absolute top-0 left-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{
-                  border: 'none',
-                  display: 'block',
-                }}
-              />
-            )}
+        {/* Content */}
+        <div className="text-center space-y-6">
+          <div className="w-20 h-20 mx-auto bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
+            <ExternalLink className="w-10 h-10 text-white" />
           </div>
+          
+          <h3 className="text-2xl font-bold text-white">{title}</h3>
+          
+          <p className="text-gray-400">
+            {title.includes('Deutsch') || title.includes('Klicken') 
+              ? 'Klicken Sie auf die Schaltfläche unten, um das Video auf YouTube anzusehen' 
+              : 'Click the button below to watch the video on YouTube'}
+          </p>
+
+          <button
+            onClick={handleOpenVideo}
+            className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3"
+          >
+            <ExternalLink className="w-6 h-6" />
+            <span>
+              {title.includes('Deutsch') || title.includes('Klicken') 
+                ? 'Video auf YouTube öffnen' 
+                : 'Open Video on YouTube'}
+            </span>
+          </button>
+
+          <p className="text-sm text-gray-500">
+            {videoUrl}
+          </p>
         </div>
       </div>
     </div>
