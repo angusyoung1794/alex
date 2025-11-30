@@ -54,7 +54,7 @@ const Layout = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-950/95 border-t border-pink-500/20 py-8 mt-20">
+      <footer className="bg-black border-t border-pink-500/20 py-8 mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
