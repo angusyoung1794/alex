@@ -71,7 +71,7 @@ const Home = () => {
           {/* Hero Text */}
           <div className="text-center space-y-6 mb-12">
             <h1 
-              className="text-4xl md:text-5xl font-bold text-gray-700 tracking-wider"
+              className="text-3xl md:text-4xl font-bold text-gray-600 tracking-wider"
               style={{
                 transform: 'scaleY(1.5)',
                 transformOrigin: 'center',
@@ -80,7 +80,7 @@ const Home = () => {
             >
               {t('heroTitle')}
             </h1>
-            <p className="text-3xl md:text-4xl text-gray-200 font-light">
+            <p className="text-4xl md:text-5xl text-white font-medium">
               {t('heroSubtitle')}
             </p>
           </div>
