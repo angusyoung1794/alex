@@ -31,18 +31,18 @@ const NavigationButtons = () => {
   if (!isHomePage) return null;
 
   return (
-    <div className="fixed right-8 top-1/2 -translate-y-1/2 z-40 flex flex-col space-y-4">
+    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex flex-col space-y-4">
       {navItems.map((item, index) => {
         const Icon = item.icon;
         return (
           <button
             key={item.path}
             onClick={() => navigate(item.path)}
-            className={`group relative bg-gradient-to-r from-slate-800/90 to-slate-900/90 backdrop-blur-md border border-pink-500/30 rounded-l-2xl px-6 py-4 transition-all duration-500 hover:scale-105 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-500/20 ${
+            className={`group relative bg-gradient-to-r from-slate-800/90 to-slate-900/90 backdrop-blur-md border border-pink-500/30 rounded-l-2xl px-6 py-4 transition-all duration-500 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-500/20 ${
               isVisible 
-                ? 'translate-x-0 opacity-100' 
+                ? 'translate-x-[calc(100%-3.5rem)] opacity-100' 
                 : 'translate-x-[200px] opacity-0'
-            }`}
+            } hover:translate-x-0`}
             style={{ 
               transitionDelay: isVisible ? `${item.delay}ms` : '0ms',
             }}
