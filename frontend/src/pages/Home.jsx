@@ -38,19 +38,19 @@ const Home = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-purple-950/30 to-slate-950" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-black" />
 
       {/* Hero Section */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-5xl mx-auto">
-          {/* Portrait with fog effect */}
+          {/* Portrait with fog effect - Larger, no border */}
           <div className="relative mb-12 flex justify-center">
             <div className="relative">
               <img
                 src="https://customer-assets.emergentagent.com/job_1e9b8f76-4521-4fdf-ae91-afad42458ef4/artifacts/2oicmsyy_main_page.jpg"
                 alt="Alexey Bespechny"
-                className="w-64 h-64 object-cover rounded-full border-4 border-pink-500/30 shadow-2xl shadow-pink-500/20 transition-all duration-1000"
+                className="w-96 h-96 object-cover rounded-full shadow-2xl shadow-pink-500/20 transition-all duration-1000"
                 style={{
                   filter: `blur(${fogOpacity * 8}px)`,
                   opacity: 1 - (fogOpacity * 0.5),
@@ -71,7 +71,7 @@ const Home = () => {
           {/* Hero Text */}
           <div className="text-center space-y-6 mb-12">
             <h1 
-              className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 tracking-wider"
+              className="text-4xl md:text-5xl font-bold text-gray-700 tracking-wider"
               style={{
                 transform: 'scaleY(1.5)',
                 transformOrigin: 'center',
@@ -80,7 +80,7 @@ const Home = () => {
             >
               {t('heroTitle')}
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-300 font-light">
+            <p className="text-3xl md:text-4xl text-gray-200 font-light">
               {t('heroSubtitle')}
             </p>
           </div>
