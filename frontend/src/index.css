@@ -26,6 +26,26 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    a, button {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    /* Prevent text selection on touch */
+    * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+    
+    /* Allow text selection in paragraphs */
+    p, span, div {
+        -webkit-touch-callout: default;
+    }
+}
+
 /* Hide Emergent badge - comprehensive approach */
 a[href*="emergent"],
 a[href*=".sh"],
