@@ -28,7 +28,7 @@ const NavigationButtons = () => {
   ];
 
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex flex-col space-y-4">
+    <div className="hidden md:flex fixed right-0 top-1/2 -translate-y-1/2 z-40 flex-col space-y-4">
       {navItems.map((item, index) => {
         const Icon = item.icon;
         return (
