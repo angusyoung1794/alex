@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Download, Globe } from 'lucide-react';
 import { Button } from './ui/button';
+import MobileNavigation from './MobileNavigation';
 
 const Layout = ({ children }) => {
   const { language, toggleLanguage, t } = useLanguage();
