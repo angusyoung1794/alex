@@ -119,20 +119,58 @@ const Home = () => {
             </Button>
           </div>
 
-          {/* Promo Section */}
-          <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/30 rounded-2xl p-8 max-w-2xl mx-auto">
-            <div className="text-center space-y-4">
+          {/* Promo Section with 4 languages */}
+          <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/30 rounded-2xl p-8 max-w-3xl mx-auto">
+            <div className="text-center space-y-6">
               <p className="text-xl text-pink-400 font-semibold">
                 {t('promoText')}
               </p>
-              <Button
-                onClick={() => setIsModalOpen(true)}
-                variant="outline"
-                className="border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                {t('watchVideo')}
-              </Button>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <Button
+                  onClick={() => {
+                    setSelectedLanguage('de');
+                    setIsModalOpen(true);
+                  }}
+                  variant="outline"
+                  className="border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
+                >
+                  <Play className="w-4 h-4 mr-2" />
+                  Deutsch
+                </Button>
+                <Button
+                  onClick={() => {
+                    setSelectedLanguage('en');
+                    setIsModalOpen(true);
+                  }}
+                  variant="outline"
+                  className="border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
+                >
+                  <Play className="w-4 h-4 mr-2" />
+                  English
+                </Button>
+                <Button
+                  onClick={() => {
+                    setSelectedLanguage('es');
+                    setIsModalOpen(true);
+                  }}
+                  variant="outline"
+                  className="border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
+                >
+                  <Play className="w-4 h-4 mr-2" />
+                  Español
+                </Button>
+                <Button
+                  onClick={() => {
+                    setSelectedLanguage('zh');
+                    setIsModalOpen(true);
+                  }}
+                  variant="outline"
+                  className="border-pink-500/50 bg-slate-800/50 text-pink-400 hover:bg-pink-500/10 hover:text-pink-300 hover:border-pink-400 transition-all duration-300"
+                >
+                  <Play className="w-4 h-4 mr-2" />
+                  中文
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -145,7 +183,7 @@ const Home = () => {
       <YouTubeModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        videoUrl={getVideoUrl()}
+        videoUrl={getVideoUrl(selectedLanguage)}
         title={t('promoText')}
       />
 
