@@ -11,12 +11,15 @@ const YouTubeModal = ({ isOpen, onClose, videoUrl, title }) => {
   // Extract video ID from YouTube URL
   const getVideoId = (url) => {
     if (!url) return null;
-    const match = url.match(/shorts\/([a-zA-Z0-9_-]+)/);
-    return match ? match[1] : null;
+    // Match both shorts and regular video URLs
+    const shortsMatch = url.match(/shorts\/([a-zA-Z0-9_-]+)/);
+    const watchMatch = url.match(/[?&]v=([a-zA-Z0-9_-]+)/);
+    const videoId = shortsMatch ? shortsMatch[1] : (watchMatch ? watchMatch[1] : null);
+    return videoId;
   };
 
   const videoId = getVideoId(videoUrl);
-  const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+  const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1` : null;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
