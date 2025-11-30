@@ -25,10 +25,10 @@ const Home = () => {
   
   const getVideoUrl = (lang) => {
     const videos = {
-      de: 'https://youtube.com/shorts/WkoMyMRr46g?feature=share',
-      en: 'https://youtube.com/shorts/jIrjb2hxF5Y?feature=share',
-      es: 'https://youtube.com/shorts/L477pGiLIeo?feature=share',
-      zh: 'https://youtube.com/shorts/dV2Z2tTVE6U?feature=share',
+      de: 'https://www.youtube.com/watch?v=WkoMyMRr46g',
+      en: 'https://www.youtube.com/watch?v=jIrjb2hxF5Y',
+      es: 'https://www.youtube.com/watch?v=L477pGiLIeo',
+      zh: 'https://www.youtube.com/watch?v=dV2Z2tTVE6U',
     };
     return videos[lang];
   };
