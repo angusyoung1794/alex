@@ -1,11 +1,5 @@
 import React from 'react';
 import { X } from 'lucide-react';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from './ui/dialog';
 
 const YouTubeModal = ({ isOpen, onClose, videoUrl, title }) => {
   // Extract video ID from YouTube URL
@@ -21,25 +15,50 @@ const YouTubeModal = ({ isOpen, onClose, videoUrl, title }) => {
   const videoId = getVideoId(videoUrl);
   const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1` : null;
 
+  if (!isOpen) return null;
+
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl bg-slate-900 border border-pink-500/30">
-        <DialogHeader>
-          <DialogTitle className="text-white">{title}</DialogTitle>
-        </DialogHeader>
-        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-          {embedUrl && (
-            <iframe
-              src={embedUrl}
-              title={title}
-              className="absolute top-0 left-0 w-full h-full rounded-lg"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          )}
+    <div 
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div 
+        className="relative w-full max-w-4xl mx-4 bg-slate-900 border-2 border-pink-500/30 rounded-2xl shadow-2xl shadow-pink-500/20"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute -top-4 -right-4 z-10 w-10 h-10 bg-pink-600 hover:bg-pink-500 rounded-full flex items-center justify-center text-white transition-all duration-300 shadow-lg hover:scale-110"
+        >
+          <X className="w-6 h-6" />
+        </button>
+
+        {/* Header */}
+        <div className="p-6 border-b border-pink-500/20">
+          <h3 className="text-xl font-bold text-white">{title}</h3>
         </div>
-      </DialogContent>
-    </Dialog>
+
+        {/* Video Container */}
+        <div className="p-6">
+          <div className="relative w-full bg-black rounded-lg overflow-hidden" style={{ paddingBottom: '56.25%' }}>
+            {embedUrl && (
+              <iframe
+                src={embedUrl}
+                title={title}
+                className="absolute top-0 left-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                style={{
+                  border: 'none',
+                  display: 'block',
+                }}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
