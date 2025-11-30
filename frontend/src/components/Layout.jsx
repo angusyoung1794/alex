@@ -12,18 +12,9 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-pink-500/20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-pink-500/20">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_1e9b8f76-4521-4fdf-ae91-afad42458ef4/artifacts/0hgaegog_Alex-GSM_Vibrant_Logo.png" 
-                alt="Alex-GSM Logo" 
-                className="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
-              />
-            </Link>
-
+          <div className="flex items-center justify-end">
             {/* Right Side */}
             <div className="flex items-center space-x-4">
               {/* Language Toggle */}
