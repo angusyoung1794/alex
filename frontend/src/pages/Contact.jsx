@@ -138,6 +138,23 @@ const Contact = () => {
           </div>
         </div>
 
+        {/* Photo */}
+        <div className="mt-12">
+          <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10 max-w-2xl mx-auto">
+            <img 
+              src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/sagsmulti1.jpg" 
+              alt="SAG'S MULTI! Award" 
+              className="w-full h-auto object-cover"
+            />
+            <div className="p-6 text-center">
+              <p className="text-white font-semibold text-xl mb-2">
+                {t('language') === 'de' ? 'Österreichischer Rhetorik-Meister 2020/21' : 'Austrian Public Speaking Champion 2020/21'}
+              </p>
+              <p className="text-gray-400">SAG'S MULTI!</p>
+            </div>
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="text-center mt-12">
           <Button
