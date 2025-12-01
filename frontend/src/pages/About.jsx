@@ -64,6 +64,62 @@ const About = () => {
           </div>
         </div>
 
+        {/* Photo Gallery */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-center text-white mb-8">
+            {t('language') === 'de' ? 'Galerie' : 'Gallery'}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
+              <img 
+                src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/sagsmulti3.jpg" 
+                alt="SAG'S MULTI!" 
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-white font-semibold">SAG'S MULTI! 2020/21</p>
+                <p className="text-gray-400 text-sm">{t('language') === 'de' ? 'Österreichischer Rhetorik-Meister' : 'Austrian Public Speaking Champion'}</p>
+              </div>
+            </div>
+
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
+              <img 
+                src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/orf_sagsmulti.jpg" 
+                alt="ORF Interview" 
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-white font-semibold">ORF Interview</p>
+                <p className="text-gray-400 text-sm">{t('language') === 'de' ? 'Medienauftritt' : 'Media Appearance'}</p>
+              </div>
+            </div>
+
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
+              <img 
+                src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/tv_show.jpg" 
+                alt="TV Show" 
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-white font-semibold">TV Show</p>
+                <p className="text-gray-400 text-sm">{t('language') === 'de' ? 'Fernsehauftritt' : 'Television Appearance'}</p>
+              </div>
+            </div>
+
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
+              <img 
+                src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/sagsmulti2.jpg" 
+                alt="Independent Living" 
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-white font-semibold">{t('language') === 'de' ? 'Selbstständig seit 14' : 'Independent Since 14'}</p>
+                <p className="text-gray-400 text-sm">{t('language') === 'de' ? 'Leben und Studieren in Österreich' : 'Living and Studying in Austria'}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Decorative Quote */}
         <div className="mt-16 text-center">
           <div className="inline-block bg-gradient-to-r from-pink-500/10 to-purple-500/10 backdrop-blur-md border border-pink-500/30 rounded-2xl px-8 py-6">
