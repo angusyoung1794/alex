@@ -83,23 +83,23 @@ const Home = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="text-center mb-8 space-y-2">
-            <h2 className="text-3xl font-bold text-white">Alexey Bespechny</h2>
-            <p className="text-lg text-gray-400">
+          <div className="text-center mb-8 space-y-2 px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Alexey Bespechny</h2>
+            <p className="text-base md:text-lg text-gray-400">
               {language === 'de' 
                 ? 'Global Sales & Marketing Student (3. Jahr, FH Steyr)' 
                 : 'Global Sales & Marketing Student (3rd year, FH Steyr)'}
             </p>
-            <p className="text-md text-gray-500 italic max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-gray-500 italic max-w-2xl mx-auto px-4">
               {language === 'de'
                 ? '„Ich suche mein Pflichtpraktikum ab Sommer 2025 – idealerweise im internationalen Vertrieb, Key Account Management oder Digital Marketing."'
                 : '"Looking for my mandatory internship from summer 2025 – ideally in international sales, key account management or digital marketing."'}
             </p>
-            <div className="flex items-center justify-center space-x-4 text-gray-400 pt-2">
+            <div className="flex flex-col md:flex-row items-center justify-center md:space-x-4 text-gray-400 pt-2 space-y-1 md:space-y-0 text-sm md:text-base">
               <span>+43 681 81411499</span>
-              <span>•</span>
+              <span className="hidden md:inline">•</span>
               <span>7css77@gmail.com</span>
-              <span>•</span>
+              <span className="hidden md:inline">•</span>
               <span>Linz/Steyr/Wien/Salzburg</span>
             </div>
           </div>
