@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
-import { ArrowLeft, Languages, Laptop, Award } from 'lucide-react';
+import { ArrowLeft, Languages, Laptop, Award, Play } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import NavigationButtons from '../components/NavigationButtons';
 
@@ -72,7 +72,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
@@ -112,6 +112,35 @@ const Skills = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Video Section */}
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-300">
+            <div className="flex flex-col items-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center">
+                <Play className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white text-center">
+                {t('language') === 'de' ? 'Sehen Sie meine Fähigkeiten in Aktion' : 'See My Skills in Action'}
+              </h3>
+              <p className="text-gray-400 text-center">
+                {t('language') === 'de' 
+                  ? 'Schauen Sie sich mein Video an, um mehr über meine Kompetenzen zu erfahren' 
+                  : 'Watch my video to learn more about my competencies'}
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=gk96RVJ0NsQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border-0 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 px-6 py-3 rounded-lg text-base font-medium"
+                style={{ touchAction: 'manipulation' }}
+              >
+                <Play className="w-5 h-5 mr-2" />
+                {t('language') === 'de' ? 'Video ansehen' : 'Watch Video'}
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -116,6 +116,75 @@ const Experience = () => {
             );
           })}
         </div>
+
+        {/* Photo Gallery */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-center text-white mb-8">
+            {t('language') === 'de' ? 'Projektgalerie' : 'Project Gallery'}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
+              <img 
+                src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/nxrt.jpg" 
+                alt="NXRT GmbH" 
+                className="w-full h-48 object-cover"
+                style={{ objectPosition: 'center 35%' }}
+              />
+              <div className="p-4">
+                <p className="text-white font-semibold">NXRT GmbH</p>
+                <p className="text-gray-400 text-sm">{t('language') === 'de' ? 'XR-Technologien & Nachhaltigkeit' : 'XR Technologies & Sustainability'}</p>
+              </div>
+            </div>
+
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
+              <img 
+                src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/moonshot.jpg" 
+                alt="Moonshot Bootcamp" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-white font-semibold">Moonshot Bootcamp</p>
+                <p className="text-gray-400 text-sm">{t('language') === 'de' ? 'SDGs & Exponential Tech' : 'SDGs & Exponential Tech'}</p>
+              </div>
+            </div>
+
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
+              <img 
+                src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/sap.jpg" 
+                alt="SAP Certificate" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-white font-semibold">SAP</p>
+                <p className="text-gray-400 text-sm">MM, FI, SD</p>
+              </div>
+            </div>
+
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
+              <img 
+                src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/urkunde.jpg" 
+                alt="Certificate" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-white font-semibold">{t('language') === 'de' ? 'Urkunde' : 'Certificate'}</p>
+                <p className="text-gray-400 text-sm">{t('language') === 'de' ? 'Auszeichnung' : 'Award'}</p>
+              </div>
+            </div>
+
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
+              <img 
+                src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/abschlusszertifikat.jpg" 
+                alt="Graduation Certificate" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-white font-semibold">{t('language') === 'de' ? 'Abschlusszertifikat' : 'Graduation Certificate'}</p>
+                <p className="text-gray-400 text-sm">HAK Oberwart</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Background decoration */}
