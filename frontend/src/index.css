@@ -46,33 +46,58 @@ html {
     }
 }
 
-/* Hide Emergent badge - comprehensive approach */
+/* Hide Emergent badge - AGGRESSIVE approach */
 a[href*="emergent"],
 a[href*=".sh"],
+a[href*="made"],
 iframe[src*="emergent"],
 div[class*="badge"],
 div[id*="badge"],
 button[class*="emergent"],
 div[style*="position: fixed"][style*="bottom"],
 div[style*="position: fixed"][style*="right"],
-a[target="_blank"][rel*="noopener"][style*="fixed"] {
+a[target="_blank"][rel*="noopener"][style*="fixed"],
+/* Target any link with "made" or "emergent" text */
+a:has-text("made"),
+a:has-text("emergent"),
+a:has-text("Emergent"),
+a:has-text("Made") {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
     width: 0 !important;
     height: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
 }
 
-/* Hide any fixed positioned elements in bottom right */
-body > div:not(#root) {
+/* Hide any fixed positioned elements in bottom right that are not our components */
+body > div:not(#root):not([class*="toast"]):not([class*="notification"]) {
     display: none !important;
 }
 
 /* Additional selectors for common badge patterns */
 div[class*="Badge"],
 a[class*="badge"],
-span[class*="badge"] {
+span[class*="badge"],
+button[class*="Badge"],
+/* Purple button that might be the badge */
+button.bg-purple-600,
+a.bg-purple-600 {
+    display: none !important;
+}
+
+/* Immediate hide on load - no delay */
+* {
+    animation-delay: 0s !important;
+}
+
+/* Hide elements in bottom-right corner specifically */
+[style*="bottom: 20px"],
+[style*="bottom: 24px"],
+[style*="right: 20px"],
+[style*="right: 24px"] {
     display: none !important;
 }
 
