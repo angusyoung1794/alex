@@ -99,6 +99,7 @@ const About = () => {
                 src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/tv_show.jpg" 
                 alt="TV Show" 
                 className="w-full h-64 object-cover"
+                style={{ objectPosition: 'center 30%' }}
               />
               <div className="p-4">
                 <p className="text-white font-semibold">TV Show</p>
