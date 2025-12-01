@@ -124,69 +124,69 @@ const Home = () => {
               </h3>
               
               {/* Deutsch Video */}
-              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-6 mb-4 hover:border-pink-500/40 transition-all duration-300">
-                <p className="text-base md:text-lg text-gray-300 mb-4">
+              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-4 mb-4 hover:border-pink-500/40 transition-all duration-300">
+                <p className="text-sm md:text-base text-gray-300 mb-3">
                   {t('promoTextDeutsch')}
                 </p>
                 <a
                   href={getVideoUrl('de')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center border-2 border-pink-500/50 bg-pink-600/20 text-pink-400 hover:bg-pink-500/30 hover:text-pink-300 hover:border-pink-400 active:bg-pink-500/40 transition-all duration-300 px-6 py-4 rounded-lg text-lg font-semibold"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border-0 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 px-4 py-2 rounded-md text-sm font-medium"
                   style={{ touchAction: 'manipulation' }}
                 >
-                  <Play className="w-5 h-5 mr-2" />
+                  <Play className="w-4 h-4 mr-2" />
                   Deutsch
                 </a>
               </div>
 
               {/* English Video */}
-              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-6 mb-4 hover:border-pink-500/40 transition-all duration-300">
-                <p className="text-base md:text-lg text-gray-300 mb-4">
+              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-4 mb-4 hover:border-pink-500/40 transition-all duration-300">
+                <p className="text-sm md:text-base text-gray-300 mb-3">
                   {t('promoTextEnglish')}
                 </p>
                 <a
                   href={getVideoUrl('en')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center border-2 border-pink-500/50 bg-pink-600/20 text-pink-400 hover:bg-pink-500/30 hover:text-pink-300 hover:border-pink-400 active:bg-pink-500/40 transition-all duration-300 px-6 py-4 rounded-lg text-lg font-semibold"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border-0 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 px-4 py-2 rounded-md text-sm font-medium"
                   style={{ touchAction: 'manipulation' }}
                 >
-                  <Play className="w-5 h-5 mr-2" />
+                  <Play className="w-4 h-4 mr-2" />
                   English
                 </a>
               </div>
 
               {/* Español Video */}
-              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-6 mb-4 hover:border-pink-500/40 transition-all duration-300">
-                <p className="text-base md:text-lg text-gray-300 mb-4">
+              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-4 mb-4 hover:border-pink-500/40 transition-all duration-300">
+                <p className="text-sm md:text-base text-gray-300 mb-3">
                   {t('promoTextEspanol')}
                 </p>
                 <a
                   href={getVideoUrl('es')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center border-2 border-pink-500/50 bg-pink-600/20 text-pink-400 hover:bg-pink-500/30 hover:text-pink-300 hover:border-pink-400 active:bg-pink-500/40 transition-all duration-300 px-6 py-4 rounded-lg text-lg font-semibold"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border-0 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 px-4 py-2 rounded-md text-sm font-medium"
                   style={{ touchAction: 'manipulation' }}
                 >
-                  <Play className="w-5 h-5 mr-2" />
+                  <Play className="w-4 h-4 mr-2" />
                   Español
                 </a>
               </div>
 
               {/* Chinese Video */}
-              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-6 hover:border-pink-500/40 transition-all duration-300">
-                <p className="text-base md:text-lg text-gray-300 mb-4">
+              <div className="bg-slate-800/50 border border-pink-500/20 rounded-xl p-4 hover:border-pink-500/40 transition-all duration-300">
+                <p className="text-sm md:text-base text-gray-300 mb-3">
                   {t('promoTextChinese')}
                 </p>
                 <a
                   href={getVideoUrl('zh')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center border-2 border-pink-500/50 bg-pink-600/20 text-pink-400 hover:bg-pink-500/30 hover:text-pink-300 hover:border-pink-400 active:bg-pink-500/40 transition-all duration-300 px-6 py-4 rounded-lg text-lg font-semibold"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border-0 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 px-4 py-2 rounded-md text-sm font-medium"
                   style={{ touchAction: 'manipulation' }}
                 >
-                  <Play className="w-5 h-5 mr-2" />
+                  <Play className="w-4 h-4 mr-2" />
                   中文
                 </a>
               </div>
