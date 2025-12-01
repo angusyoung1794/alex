@@ -128,6 +128,7 @@ const Experience = () => {
                 src="https://raw.githubusercontent.com/angusyoung1794/alex/main/frontend/public/nxrt.jpg" 
                 alt="NXRT GmbH" 
                 className="w-full h-48 object-cover"
+                style={{ objectPosition: 'center 35%' }}
               />
               <div className="p-4">
                 <p className="text-white font-semibold">NXRT GmbH</p>
