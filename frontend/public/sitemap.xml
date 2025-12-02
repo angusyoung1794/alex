@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home Page -->
+  <url>
+    <loc>https://alex-gsm.pro/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alex-gsm.pro/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex-gsm.pro/" />
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://alex-gsm.pro/about</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alex-gsm.pro/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex-gsm.pro/about" />
+  </url>
+  
+  <!-- Education Page -->
+  <url>
+    <loc>https://alex-gsm.pro/education</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alex-gsm.pro/education" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex-gsm.pro/education" />
+  </url>
+  
+  <!-- Experience Page -->
+  <url>
+    <loc>https://alex-gsm.pro/experience</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alex-gsm.pro/experience" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex-gsm.pro/experience" />
+  </url>
+  
+  <!-- Skills Page -->
+  <url>
+    <loc>https://alex-gsm.pro/skills</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alex-gsm.pro/skills" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex-gsm.pro/skills" />
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://alex-gsm.pro/contact</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alex-gsm.pro/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex-gsm.pro/contact" />
+  </url>
+</urlset>
