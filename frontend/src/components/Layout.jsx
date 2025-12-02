@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
             </div>
             <div className="flex items-center space-x-6">
               <a 
-                href="https://linkedin.com/in/alexeybespechny" 
+                href="https://www.linkedin.com/in/aleksei-bespechnyi-%E5%8C%85%E5%81%89%E7%BF%94-5a8496217" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
@@ -71,12 +71,12 @@ const Layout = ({ children }) => {
                 LinkedIn
               </a>
               <a 
-                href="https://xing.com/profile/Alexey_Bespechny" 
+                href="https://www.instagram.com/sss1de?igsh=d3Byb2U2MWhzNWJmb" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
               >
-                XING
+                Instagram
               </a>
             </div>
           </div>
