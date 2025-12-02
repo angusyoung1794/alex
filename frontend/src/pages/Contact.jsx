@@ -33,13 +33,13 @@ const Contact = () => {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/alexeybespechny',
+      url: 'https://www.linkedin.com/in/aleksei-bespechnyi-%E5%8C%85%E5%81%89%E7%BF%94-5a8496217',
       icon: Linkedin,
     },
     {
-      name: 'XING',
-      url: 'https://xing.com/profile/Alexey_Bespechny',
-      icon: ExternalLink,
+      name: 'Instagram',
+      url: 'https://www.instagram.com/sss1de?igsh=d3Byb2U2MWhzNWJmb',
+      icon: Instagram,
     },
   ];
 
