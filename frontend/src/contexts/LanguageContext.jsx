@@ -15,7 +15,7 @@ const translations = {
     promoTextDeutsch: 'Klicken Sie auf \'Angebot machen\' und erhalten Sie 100 Euro.',
     promoTextEnglish: 'Click the \'Make an Offer\' button and receive 100 euros.',
     promoTextEspanol: 'Haga clic en \'Hacer una oferta\' y reciba 100 euros.',
-    promoTextChinese: 'Diǎnjí tíchū bàojià, lì dé 100 ōu!',
+    promoTextChinese: '點擊提出報價按鈕即可獲得100歐元',
     watchVideo: 'Video ansehen',
     
     // Navigation
@@ -27,9 +27,9 @@ const translations = {
     
     // About
     aboutTitle: 'Über mich',
-    aboutText1: 'Seit meinem 14. Lebensjahr lebe und studiere ich selbstständig in Österreich. Diese Erfahrung hat mich früh unabhängig, belastbar und interkulturell höchst kompetent gemacht.',
-    aboutText2: 'Aktuell studiere ich im 6. Semester „Global Sales and Marketing" an der FH Oberösterreich in Steyr (100 % englischsprachig). Mein Auslandssemester an der Providence University in Taiwan (2024/25) vertieft gerade meine Chinesisch-Kenntnisse und mein Verständnis für den asiatischen Markt.',
-    aboutText3: 'Ich brenne für nachhaltige Technologien, internationale Geschäftsentwicklung und überzeugende Kommunikation – ob auf der Bühne oder im Kundengespräch.',
+    aboutText1: 'Seit meinem 14. Lebensjahr lebe und studiere ich eigenständig in Österreich. Diese Erfahrung hat mich früh unabhängig, resilient und interkulturell äußerst kompetent gemacht.',
+    aboutText2: 'Derzeit studiere ich im 6. Semester Global Sales and Marketing an der FH Oberösterreich in Steyr (100 % englischsprachig). Mein Auslandssemester an der Providence University in Taiwan (2024/25) vertieft derzeit meine Chinesischkenntnisse sowie mein Verständnis für den asiatischen Markt.',
+    aboutText3: 'Ich brenne für nachhaltige Technologien, internationale Geschäftsentwicklung und überzeugende Kommunikation, ob auf der Bühne oder im direkten Kundengespräch.',
     
     // Education
     educationTitle: 'Ausbildung',
@@ -52,14 +52,19 @@ const translations = {
     exp2Company: 'Restaurant La Galeria, Steyr',
     exp2Date: '2023–2024',
     exp2Desc: 'Deutliche Umsatzsteigerung durch aktives Upselling und Kundenbindung',
-    exp3Title: 'Junior Company',
-    exp3Company: 'HAK Oberwart',
-    exp3Desc: 'Gründung und Führung eines echten Schülerunternehmens (Produktion, Marketing, Finanzen)',
-    exp4Title: 'Österreichischer Rhetorik-Meister',
-    exp4Company: 'SAG\'S MULTI!',
-    exp4Date: '2020/21',
-    exp5Title: 'Bootcamp Wien',
-    exp5Desc: 'SDGs, Moonshot-Thinking, Exponential Technologies & Pitching',
+    exp3Title: 'Administratives Praktikum (Pflichtpraktikum)',
+    exp3Company: 'STEP Gästehäuser Pinkafeld (Verein zur Förderung der Schulen in Pinkafeld)',
+    exp3Location: 'Pinkafeld, Österreich',
+    exp3Date: 'August 2020',
+    exp3Desc: 'Administrative Unterstützung, Arbeit mit Bank- und Kundensystemen, Datenbankpflege (Excel, Access)',
+    exp4Title: 'Junior Company',
+    exp4Company: 'HAK Oberwart',
+    exp4Desc: 'Gründung und Führung eines echten Schülerunternehmens (Produktion, Marketing, Finanzen)',
+    exp5Title: 'Österreichischer Rhetorik-Meister',
+    exp5Company: 'SAG\'S MULTI!',
+    exp5Date: '2020/21',
+    exp6Title: 'Bootcamp Wien',
+    exp6Desc: 'SDGs, Moonshot-Thinking, Exponential Technologies & Pitching',
     
     // Skills
     skillsTitle: 'Kompetenzen',
@@ -70,7 +75,7 @@ const translations = {
     langGerman: 'Deutsch (C2 verhandlungssicher)',
     langEnglish: 'Englisch (C1)',
     langSpanish: 'Spanisch (B2)',
-    langChinese: 'Chinesisch (B1, intensiv im Aufbau)',
+    langChinese: 'Chinesisch (HSK3)',
     itSAP: 'SAP (MM, FI, SD)',
     itExcel: 'Excel (fortgeschritten)',
     itAccess: 'Access',
@@ -88,7 +93,7 @@ const translations = {
     contactFlexible: 'Flexibel einsetzbar in Linz, Steyr, Wien oder remote',
     
     // Footer
-    footerRights: '© 2025 Alexey Bespechny. Alle Rechte vorbehalten.',
+    footerRights: '© 2025 Aleksei Bespechnyi. Alle Rechte vorbehalten.',
   },
   en: {
     // Header
@@ -102,7 +107,7 @@ const translations = {
     promoTextDeutsch: 'Klicken Sie auf \'Angebot machen\' und erhalten Sie 100 Euro.',
     promoTextEnglish: 'Click the \'Make an Offer\' button and receive 100 euros.',
     promoTextEspanol: 'Haga clic en \'Hacer una oferta\' y reciba 100 euros.',
-    promoTextChinese: 'Diǎnjí tíchū bàojià, lì dé 100 ōu!',
+    promoTextChinese: '點擊提出報價按鈕即可獲得100歐元',
     watchVideo: 'Watch Video',
     
     // Navigation
@@ -120,7 +125,7 @@ const translations = {
     
     // Education
     educationTitle: 'Education',
-    edu1Title: 'B.A. Global Sales & Marketing',
+    edu1Title: 'Bachelor of Arts – Global Sales & Marketing',
     edu1Location: 'University of Applied Sciences Upper Austria, Steyr Campus',
     edu1Date: 'since 09.2023 (graduation 2026)',
     edu2Title: 'Exchange semester',
@@ -139,14 +144,19 @@ const translations = {
     exp2Company: 'La Galeria Italian Restaurant, Steyr',
     exp2Date: '2023–2024',
     exp2Desc: 'Significant revenue increase through active upselling',
-    exp3Title: 'Junior Company',
-    exp3Company: 'founded and managed a real student company (full cycle)',
-    exp3Desc: '',
-    exp4Title: 'Austrian public speaking champion',
-    exp4Company: 'SAG\'S MULTI!',
-    exp4Date: '2020/21',
-    exp5Title: 'Vienna Bootcamp',
-    exp5Desc: 'SDGs, Moonshot Thinking, Exponential Tech & Pitch Training',
+    exp3Title: 'Administrative Internship (Mandatory Internship)',
+    exp3Company: 'STEP Gästehäuser Pinkafeld (Association for the Promotion of Schools in Pinkafeld)',
+    exp3Location: 'Pinkafeld, Austria',
+    exp3Date: 'August 2020',
+    exp3Desc: 'Administrative support, work with banking and customer systems, database maintenance (Excel, Access)',
+    exp4Title: 'Junior Company',
+    exp4Company: 'founded and managed a real student company (full cycle)',
+    exp4Desc: '',
+    exp5Title: 'Austrian public speaking champion',
+    exp5Company: 'SAG\'S MULTI!',
+    exp5Date: '2020/21',
+    exp6Title: 'Vienna Bootcamp',
+    exp6Desc: 'SDGs, Moonshot Thinking, Exponential Tech & Pitch Training',
     
     // Skills
     skillsTitle: 'Skills',
@@ -157,7 +167,7 @@ const translations = {
     langGerman: 'German (C2/business fluent)',
     langEnglish: 'English (C1)',
     langSpanish: 'Spanish (B2)',
-    langChinese: 'Chinese (B1, currently intensifying)',
+    langChinese: 'Chinese (HSK3)',
     itSAP: 'SAP (MM, FI, SD)',
     itExcel: 'Advanced Excel',
     itAccess: 'Access',
@@ -175,7 +185,7 @@ const translations = {
     contactFlexible: 'Flexible deployment in Linz, Steyr, Vienna or remote',
     
     // Footer
-    footerRights: '© 2025 Alexey Bespechny. All rights reserved.',
+    footerRights: '© 2025 Aleksei Bespechnyi. All rights reserved.',
   },
 };
 

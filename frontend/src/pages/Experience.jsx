@@ -28,20 +28,28 @@ const Experience = () => {
       title: t('exp3Title'),
       company: t('exp3Company'),
       description: t('exp3Desc'),
-      date: '',
-      icon: Award,
+      date: t('exp3Date'),
+      location: t('exp3Location'),
+      icon: Briefcase,
     },
     {
       title: t('exp4Title'),
       company: t('exp4Company'),
-      description: '',
-      date: t('exp4Date'),
+      description: t('exp4Desc'),
+      date: '',
       icon: Award,
     },
     {
       title: t('exp5Title'),
+      company: t('exp5Company'),
+      description: '',
+      date: t('exp5Date'),
+      icon: Award,
+    },
+    {
+      title: t('exp6Title'),
       company: '',
-      description: t('exp5Desc'),
+      description: t('exp6Desc'),
       date: '',
       icon: Award,
     },
@@ -98,6 +106,12 @@ const Experience = () => {
                 {exp.company && (
                   <p className="text-pink-400 font-medium mb-2">
                     {exp.company}
+                  </p>
+                )}
+                
+                {exp.location && (
+                  <p className="text-gray-400 text-sm mb-2">
+                    {exp.location}
                   </p>
                 )}
                 

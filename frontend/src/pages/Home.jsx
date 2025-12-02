@@ -46,7 +46,7 @@ const Home = () => {
             <div className="relative">
               <img
                 src="https://customer-assets.emergentagent.com/job_1e9b8f76-4521-4fdf-ae91-afad42458ef4/artifacts/2oicmsyy_main_page.jpg"
-                alt="Alexey Bespechny"
+                alt="Aleksei Bespechnyi"
                 className="w-96 h-96 object-cover rounded-full shadow-2xl shadow-pink-500/20 transition-all duration-1000"
                 style={{
                   filter: `blur(${fogOpacity * 8}px)`,
@@ -84,11 +84,11 @@ const Home = () => {
 
           {/* Contact Info */}
           <div className="text-center mb-8 space-y-2 px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Alexey Bespechny</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Aleksei Bespechnyi</h2>
             <p className="text-base md:text-lg text-gray-400">
               {language === 'de' 
-                ? 'Global Sales & Marketing Student (3. Jahr, FH Steyr)' 
-                : 'Global Sales & Marketing Student (3rd year, FH Steyr)'}
+                ? 'Bachelor Global Sales & Marketing Student (3. Jahr, FH Steyr)' 
+                : 'Bachelor Global Sales & Marketing Student (3rd year, FH Steyr)'}
             </p>
             <p className="text-sm md:text-base text-gray-500 italic max-w-2xl mx-auto px-4">
               {language === 'de'
@@ -198,9 +198,16 @@ const Home = () => {
       {/* Navigation Buttons */}
       <NavigationButtons />
 
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 left-10 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
   );
 };
