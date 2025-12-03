@@ -167,6 +167,7 @@ const Home = () => {
                   href={getVideoUrl('en')}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => handleVideoClick(e, 'en', 'English')}
                   className="inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border-0 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 px-4 py-2 rounded-md text-sm font-medium"
                   style={{ touchAction: 'manipulation' }}
                 >
