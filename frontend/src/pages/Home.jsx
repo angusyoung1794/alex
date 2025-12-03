@@ -219,6 +219,14 @@ const Home = () => {
       {/* Navigation Buttons */}
       <NavigationButtons />
 
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        videoUrl={currentVideo.url}
+        title={currentVideo.title}
+      />
+
       <style jsx>{`
         @keyframes fadeIn {
           from {
