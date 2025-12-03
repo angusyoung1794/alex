@@ -3,6 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Mail, Play } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import NavigationButtons from '../components/NavigationButtons';
+import VideoModal from '../components/VideoModal';
 
 const Home = () => {
   const { language, t } = useLanguage();
