@@ -8,6 +8,13 @@ import VideoModal from '../components/VideoModal';
 const Home = () => {
   const { language, t } = useLanguage();
   const [fogOpacity, setFogOpacity] = useState(1);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState({ url: '', title: '' });
+
+  // Check if device is mobile
+  const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+  };
 
   useEffect(() => {
     // Animate fog dissipation
@@ -26,12 +33,21 @@ const Home = () => {
   
   const getVideoUrl = (lang) => {
     const videos = {
-      de: 'https://www.youtube.com/watch?v=WkoMyMRr46g',
-      en: 'https://www.youtube.com/watch?v=jIrjb2hxF5Y',
-      es: 'https://www.youtube.com/watch?v=L477pGiLIeo',
-      zh: 'https://www.youtube.com/watch?v=dV2Z2tTVE6U',
+      de: 'https://youtube.com/shorts/vErWm_IpNcw?si=Qap27sNDinJneJ8E',
+      en: 'https://youtube.com/shorts/rTh2-uWRnN4?si=qWIJP94fcsx-qs9a',
+      es: 'https://youtube.com/shorts/CumYTZW4-Qg?si=xYaG6I7rRi8RSjHN',
+      zh: 'https://youtube.com/shorts/WjtVBHyqSlc?si=qN6LSEtVhqKmnjHd',
     };
     return videos[lang];
+  };
+
+  const handleVideoClick = (e, lang, title) => {
+    // If desktop, open modal. If mobile, let the default behavior work (open in new tab)
+    if (!isMobile()) {
+      e.preventDefault();
+      setCurrentVideo({ url: getVideoUrl(lang), title });
+      setModalOpen(true);
+    }
   };
 
   return (
